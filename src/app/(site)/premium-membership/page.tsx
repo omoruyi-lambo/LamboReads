@@ -31,7 +31,7 @@ const benefits = [
   {
     icon: Headphones,
     title: "Audiobooks",
-    description: "Full access to our upcoming audiobook library with AI and professional narration.",
+    description: "Full access to our upcoming audiobook library with professional narration and offline listening.",
   },
   {
     icon: Download,
@@ -54,6 +54,9 @@ const benefits = [
     description: "Advanced analytics, reading goals, and personalized progress tracking.",
   },
 ];
+
+const heroImageUrl =
+  "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1920&q=80";
 
 export default function PremiumMembershipPage() {
   const [name, setName] = useState("");
@@ -105,7 +108,12 @@ export default function PremiumMembershipPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0B1220] via-[#111827] to-[#0B1220] px-4 py-24 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0B1220] px-4 py-24 sm:px-6 lg:px-8">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImageUrl})` }}
+        />
+        <div className="absolute inset-0 bg-[#0B1220]/80" />
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[500px] rounded-full bg-amber-500/5 blur-3xl" />
           <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-[#10B981]/5 blur-3xl" />
@@ -118,7 +126,7 @@ export default function PremiumMembershipPage() {
             transition={{ duration: 0.55 }}
           >
             <div className="flex justify-center mb-6">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500/20 to-yellow-400/10 border border-amber-500/20">
+              <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-amber-500/10 border border-amber-500/20">
                 <Crown className="h-10 w-10 text-amber-400" />
               </div>
             </div>

@@ -18,6 +18,9 @@ import {
 import { supabase } from "@/lib/supabase/server";
 
 export default async function HomePage() {
+  const heroImageUrl =
+    "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=1920&q=80";
+
   // Fetch premium books from Supabase (no mock data)
   let premiumBooks: any[] = [];
   if (supabase) {
@@ -35,18 +38,13 @@ export default async function HomePage() {
       {/* Hero Section */}
       <section className="px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-32 sm:pb-24 bg-[#F8FAFC] relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1920&q=80')] bg-cover bg-center opacity-10"></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-15"
+            style={{ backgroundImage: `url(${heroImageUrl})` }}
+          />
         </div>
         <div className="mx-auto max-w-7xl relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <Link href="/" className="inline-flex items-center gap-2 mb-8">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1220] text-white shadow-sm overflow-hidden">
-                <img src="/images/logo.png" alt="LamboReads" className="h-6 w-6 object-contain" />
-              </div>
-              <span className="font-display text-xl font-semibold tracking-tight text-[#0B1220]">
-                LamboReads
-              </span>
-            </Link>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111827] mb-6">
               Your Premium Reading Experience
             </h1>
@@ -125,7 +123,7 @@ export default async function HomePage() {
       {/* Premium Books Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-end justify-between mb-10 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-xs font-semibold text-amber-600 mb-3">
                 <Crown className="h-3.5 w-3.5" /> Premium Collection
@@ -238,7 +236,7 @@ export default async function HomePage() {
                   Reach readers around the world and earn royalties by publishing your ebooks on LamboReads.
                 </p>
 
-                <div className="grid grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                   {[
                     { icon: Upload, label: "Upload ebooks" },
                     { icon: BookMarked, label: "Manage books" },

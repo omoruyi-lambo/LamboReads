@@ -37,8 +37,8 @@ const benefits = [
   },
   {
     icon: Sparkles,
-    title: "AI narration",
-    description: "Natural-sounding AI voices that bring every story to life.",
+    title: "Immersive narration",
+    description: "Natural-sounding voices that bring every story to life.",
   },
   {
     icon: Mic2,
@@ -51,6 +51,9 @@ const benefits = [
     description: "Your position syncs across all your devices automatically.",
   },
 ];
+
+const heroImageUrl =
+  "https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=1920&q=80";
 
 export default function AudiobooksPage() {
   const [name, setName] = useState("");
@@ -103,7 +106,12 @@ export default function AudiobooksPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#0B1220] via-[#0f1f35] to-[#0B1220] px-4 py-24 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[#0B1220] px-4 py-24 sm:px-6 lg:px-8">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImageUrl})` }}
+        />
+        <div className="absolute inset-0 bg-[#0B1220]/80" />
         {/* Background glow effects */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -top-32 left-1/2 -translate-x-1/2 h-96 w-96 rounded-full bg-[#10B981]/10 blur-3xl" />
@@ -118,7 +126,7 @@ export default function AudiobooksPage() {
           >
             {/* Illustration */}
             <div className="flex justify-center mb-8">
-              <div className="relative flex h-28 w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-[#10B981]/20 to-[#10B981]/5 border border-[#10B981]/20">
+              <div className="relative flex h-28 w-28 items-center justify-center rounded-3xl bg-[#10B981]/10 border border-[#10B981]/20">
                 <Headphones className="h-14 w-14 text-[#10B981]" />
                 {/* Animated pulse rings */}
                 <span className="absolute inset-0 rounded-3xl animate-ping border border-[#10B981]/20" />
@@ -132,17 +140,15 @@ export default function AudiobooksPage() {
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5">
               Audiobooks are{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] to-emerald-300">
-                Coming Soon
-              </span>
+              <span className="text-[#10B981]">Coming Soon</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-[#94A3B8] max-w-2xl mx-auto mb-10 leading-relaxed">
-              We&apos;re building a world-class audiobook experience for LamboReads. Listen to thousands of titles with AI-powered narration, professional voice actors, and seamless offline playback — available on every device.
+              We&apos;re building a world-class audiobook experience for LamboReads. Listen to thousands of titles with immersive narration, professional voice actors, and seamless offline playback — available on every device.
             </p>
 
             {/* Benefits grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
               {benefits.map((b, i) => {
                 const Icon = b.icon;
                 return (
