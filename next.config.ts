@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "upload.wikimedia.org", pathname: "/**" },
       { protocol: "https", hostname: "images.unsplash.com", pathname: "/**" },
       { protocol: "https", hostname: "covers.openlibrary.org", pathname: "/**" },
+      // Supabase Storage (avatars, book covers, uploads)
+      { protocol: "https", hostname: "*.supabase.co", pathname: "/**" },
+      // Google profile pictures (OAuth)
+      { protocol: "https", hostname: "lh3.googleusercontent.com", pathname: "/**" },
     ],
   },
 };
