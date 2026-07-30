@@ -1,0 +1,40 @@
+import Link from "next/link";
+import Image from "next/image";
+
+interface AuthLayoutProps {
+  title: string;
+  subtitle: React.ReactNode;
+  children: React.ReactNode;
+}
+
+export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
+  return (
+    <div className="min-h-screen grid lg:grid-cols-2">
+      <div className="relative hidden lg:block">
+        <Image
+          src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1974&auto=format&fit=crop"
+          alt="Library"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 via-[#0B1220]/50 to-transparent" />
+        <div className="relative flex flex-col justify-end h-full p-12 text-white">
+          <Link href="/" className="flex items-center gap-3 mb-4">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-[#0B1220] shadow-sm overflow-hidden">
+              <img src="/images/logo.png" alt="LamboReads" className="h-5 w-5 object-contain" />
+            </div>
+            <span className="font-display text-xl font-bold tracking-tight text-white">
+              LamboReads
+            </span>
+          </Link>
+          <p className="text-2xl font-semibold leading-snug max-w-md">"A reader lives a thousand lives before he dies . . . The man who never reads lives only one."</p>
+          <p className="mt-2 text-sm text-white/60">- George R.R. Martin</p>
+        </div>
+      </div>
+      <main className="flex flex-col items-center justify-center bg-[#F8FAFC] p-6 sm:p-10">
+        {children}
+      </main>
+    </div>
+  );
+}
