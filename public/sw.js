@@ -1,13 +1,14 @@
 /**
  * LamboReads Service Worker
  * Strategy:
- *  - App shell (HTML, JS, CSS) → Network-first, fallback to cache
- *  - Static assets (images, fonts) → Cache-first
+ *  - App shell (HTML pages) → Network-first, fallback to cache
+ *  - Static assets (images, fonts, icons) → Cache-first
+ *  - /_next/ chunks/static → Never cache (CDN immutable, changes every build)
  *  - API calls → Network-only (never cache)
  *  - Offline → serve /offline page
  */
 
-const CACHE_NAME = 'lamboreads-v1';
+const CACHE_NAME = 'lamboreads-v2';
 const OFFLINE_URL = '/offline';
 
 const PRECACHE_ASSETS = [
@@ -51,6 +52,10 @@ self.addEventListener('fetch', (event) => {
 
   // Never cache API routes or Supabase calls
   if (url.pathname.startsWith('/api/') || url.hostname.includes('supabase')) return;
+
+  // CRITICAL: Never cache Next.js build chunks — these change every deploy.
+  // The CDN serves them with immutable cache headers; SW interference breaks the app.
+  if (url.pathname.startsWith('/_next/')) return;
 
   // Static assets (images, fonts, icons) → Cache-first
   if (
