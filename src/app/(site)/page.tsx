@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { Button } from "@/components/ui/Button";
 import {
   BookOpen,
@@ -18,6 +19,32 @@ import {
 
 import { supabase } from "@/lib/supabase/server";
 import HomeFreeBooks from "@/components/home/HomeFreeBooks";
+
+function FreeBooksSkeleton() {
+  return (
+    <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-white">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
+          <div className="space-y-2">
+            <div className="h-5 w-24 rounded-full bg-[#F1F5F9] animate-pulse" />
+            <div className="h-9 w-64 rounded-xl bg-[#F1F5F9] animate-pulse" />
+            <div className="h-4 w-80 rounded bg-[#F1F5F9] animate-pulse" />
+          </div>
+          <div className="h-10 w-32 rounded-xl bg-[#F1F5F9] animate-pulse" />
+        </div>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div key={i} className="space-y-2.5 animate-pulse">
+              <div className="aspect-[2/3] w-full rounded-xl bg-[#F1F5F9]" />
+              <div className="h-4 w-3/4 rounded bg-[#F1F5F9]" />
+              <div className="h-3 w-1/2 rounded bg-[#F1F5F9]" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export const dynamic = 'force-dynamic';
 
@@ -124,8 +151,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Featured Free Books — Gutendex (Project Gutenberg) + Supabase uploaded books */}
-      <HomeFreeBooks />
+      {/* Featured Free Books — streams in while the rest of the page is already visible */}
+      <Suspense fallback={<FreeBooksSkeleton />}>
+        <HomeFreeBooks />
+      </Suspense>
 
       {/* Premium Books Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-white">
