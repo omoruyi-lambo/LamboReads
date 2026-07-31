@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BookOpen, ArrowRight } from "lucide-react";
 import { getBooksFromCatalog } from "@/lib/books/catalog";
+import { unstable_noStore as noStore } from "next/cache";
 import { BookCard } from "@/components/books/BookCard";
 import { Button } from "@/components/ui/Button";
 
@@ -17,6 +18,7 @@ import { Button } from "@/components/ui/Button";
  *  4. No mock data is used anywhere in this path.
  */
 export default async function HomeFreeBooks() {
+  noStore();
   let books: Awaited<ReturnType<typeof getBooksFromCatalog>>["results"] = [];
   let fetchFailed = false;
 

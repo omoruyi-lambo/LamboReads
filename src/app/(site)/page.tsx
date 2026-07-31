@@ -15,8 +15,11 @@ import {
   BookMarked,
   CheckCircle,
 } from "lucide-react";
+
 import { supabase } from "@/lib/supabase/server";
 import HomeFreeBooks from "@/components/home/HomeFreeBooks";
+
+export const dynamic = 'force-dynamic';
 
 export default async function HomePage() {
   const heroImageUrl =
