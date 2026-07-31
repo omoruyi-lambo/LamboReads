@@ -22,7 +22,7 @@ export default function Terms() {
           </section>
           <section className="mb-10">
             <h2 className="text-2xl font-semibold text-[#111827] mb-4">3. User Conduct</h2>
-            <p className="text-base leading-relaxed text-[#64748B]">You agree not to use the Service to: upload, post, email, transmit or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable.</p>
+            <p className="text-base leading-relaxed text-[#64748B]">You agree not to use the Service to: upload, post, email, transmit or otherwise make available any content that is unlawful, harmful, threatening, abusive, harassing, tortious, defamatory, vulgar, obscene, libelous, invasive of another&apos;s privacy, hateful, or racially, ethnically or otherwise objectionable.</p>
           </section>
           <section className="mb-10">
             <h2 className="text-2xl font-semibold text-[#111827] mb-4">4. Intellectual Property</h2>

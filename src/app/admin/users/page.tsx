@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { requireAdmin } from "@/lib/supabase/admin";
 import { supabaseAdmin } from "@/lib/supabase/server";
 import { Users, Search } from "lucide-react";
@@ -51,7 +52,7 @@ export default async function AdminUsersPage({
   return (
     <div className="space-y-5 max-w-7xl mx-auto">
       {/* Header */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h1 className="text-xl font-bold text-[#111827]">Users</h1>
           <p className="text-sm text-[#94A3B8] mt-0.5">
@@ -67,7 +68,7 @@ export default async function AdminUsersPage({
               name="q"
               defaultValue={q}
               placeholder="Search email or name…"
-              className="h-9 w-64 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm text-[#111827] placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
+              className="h-9 w-full sm:w-64 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm text-[#111827] placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
             />
           </div>
           <button
@@ -77,18 +78,18 @@ export default async function AdminUsersPage({
             Search
           </button>
           {q && (
-            <a
+            <Link
               href="/admin/users"
               className="h-9 inline-flex items-center rounded-lg border border-[#E5E7EB] bg-white px-4 text-sm text-[#475569] hover:border-red-300 hover:text-red-500 transition-colors"
             >
               Clear
-            </a>
+            </Link>
           )}
         </form>
       </div>
 
       {/* Table */}
-      <div className="overflow-hidden rounded-xl border border-[#E5E7EB] bg-white shadow-sm">
+      <div className="overflow-x-auto rounded-xl border border-[#E5E7EB] bg-white shadow-sm">
         {users.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center">
             <Users className="h-10 w-10 text-[#E5E7EB] mb-3" />
@@ -96,9 +97,9 @@ export default async function AdminUsersPage({
               {q ? `No users matching "${q}"` : "No users yet"}
             </p>
             {q && (
-              <a href="/admin/users" className="mt-2 text-xs text-[#10B981] hover:underline">
+              <Link href="/admin/users" className="mt-2 text-xs text-[#10B981] hover:underline">
                 Clear search
-              </a>
+              </Link>
             )}
           </div>
         ) : (

@@ -185,7 +185,7 @@ export function EditBookForm({ book }: { book: any; userId?: string }) {
       )}
 
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="grid gap-5 lg:grid-cols-[200px_1fr]">
+        <div className="grid gap-4 sm:gap-5 lg:grid-cols-[180px_1fr]">
           {/* Cover */}
           <div className="space-y-2">
             <p className="text-sm font-medium text-[#374151]">Cover Image</p>
@@ -371,7 +371,7 @@ export function EditBookForm({ book }: { book: any; userId?: string }) {
               <h3 className="text-base font-bold text-[#111827]">Permanently delete?</h3>
             </div>
             <p className="text-sm text-[#64748B]">
-              This will delete <strong>"{book.title}"</strong> and remove all associated files from Supabase Storage. This action is irreversible.
+              This will delete <strong>&ldquo;{book.title}&rdquo;</strong> and remove all associated files from Supabase Storage. This action is irreversible.
             </p>
             <div className="mt-5 flex gap-3 justify-end">
               <button

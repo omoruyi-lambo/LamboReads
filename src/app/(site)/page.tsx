@@ -16,6 +16,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase/server";
+import HomeFreeBooks from "@/components/home/HomeFreeBooks";
 
 export default async function HomePage() {
   const heroImageUrl =
@@ -119,6 +120,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Featured Free Books — Gutendex (Project Gutenberg) + Supabase uploaded books */}
+      <HomeFreeBooks />
 
       {/* Premium Books Section */}
       <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-24 bg-white">

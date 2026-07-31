@@ -70,18 +70,18 @@ export default function ProfilePage() {
       className="p-4 sm:p-6 lg:p-8 space-y-8 max-w-7xl mx-auto"
     >
       <motion.div variants={fadeInUp} className="space-y-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <h1 className="text-3xl sm:text-4xl font-semibold text-[#111827]">Profile</h1>
             <p className="mt-2 text-[#64748B]">Manage your reading journey and account settings</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-1 scrollbar-none flex-shrink-0 w-full sm:w-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={cn(
-                  "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200",
+                  "px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0",
                   activeTab === tab.id
                     ? "bg-[#10B981] text-white border border-[#10B981]"
                     : "text-[#64748B] hover:text-[#111827] hover:bg-[#F8FAFC] border border-[#E5E7EB]"

@@ -161,7 +161,7 @@ export function AddBookForm({ userId }: { userId?: string }) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="grid gap-5 lg:grid-cols-[200px_1fr]">
+      <div className="grid gap-4 sm:gap-5 lg:grid-cols-[180px_1fr]">
         {/* Cover */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-[#374151]">Cover Image</p>

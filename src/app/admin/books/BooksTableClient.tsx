@@ -84,11 +84,11 @@ export function BooksTableClient({ books }: { books: Book[] }) {
     <>
       {/* Bulk action bar */}
       {selected.size > 0 && (
-        <div className="flex items-center gap-3 rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 shadow-sm">
+        <div className="flex flex-wrap items-center gap-2 rounded-xl border border-[#E5E7EB] bg-white px-4 py-3 shadow-sm">
           <span className="text-sm font-medium text-[#111827]">
             {selected.size} selected
           </span>
-          <div className="flex items-center gap-2 ml-auto">
+          <div className="flex flex-wrap items-center gap-2 ml-auto">
             <button
               onClick={() => handleBulkStatus("published")}
               disabled={isPending}
@@ -270,9 +270,9 @@ export function BooksTableClient({ books }: { books: Book[] }) {
 
       {/* Delete confirmation modal */}
       {confirmDelete && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4">
           <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onClick={() => setConfirmDelete(null)} />
-          <div className="relative rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-xl w-full max-w-sm">
+          <div className="relative rounded-2xl border border-[#E5E7EB] bg-white p-4 sm:p-6 shadow-xl w-full max-w-sm">
             <h3 className="text-base font-bold text-[#111827]">Delete this book?</h3>
             <p className="mt-2 text-sm text-[#64748B]">
               This will soft-delete the book and remove its associated files from Storage. You can permanently delete it later.

@@ -68,7 +68,7 @@ export default async function AuthorBooksPage({
   ];  return (
     <div className="space-y-5 p-5 sm:p-7 max-w-5xl mx-auto">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex flex-wrap items-start justify-between gap-3 sm:gap-4">
         <div>
           <h1 className="text-xl font-bold text-[#111827]">My Books</h1>
           <p className="text-sm text-[#94A3B8] mt-0.5">
@@ -84,7 +84,7 @@ export default async function AuthorBooksPage({
       </div>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 sm:grid-cols-4">
         {[
           { label: "Published", value: published, color: "text-[#10B981]", bg: "bg-[#ECFDF5]" },
           { label: "Pending",   value: pending,   color: "text-amber-600", bg: "bg-amber-50"  },
@@ -99,7 +99,7 @@ export default async function AuthorBooksPage({
       </div>
 
       {/* Status tabs */}
-      <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1 w-fit flex-wrap">
+      <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1 w-full sm:w-fit overflow-x-auto scrollbar-none">
         {TABS.map((tab) => (
           <a
             key={tab.value}
@@ -121,7 +121,7 @@ export default async function AuthorBooksPage({
       </div>
 
       {/* Books table / cards */}
-      <div className="rounded-xl border border-[#E5E7EB] bg-white shadow-sm overflow-hidden">
+      <div className="rounded-xl border border-[#E5E7EB] bg-white shadow-sm overflow-x-auto">
         {!books || books.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-20 text-center px-6">
             <BookOpen className="h-10 w-10 text-[#E5E7EB] mb-3" />

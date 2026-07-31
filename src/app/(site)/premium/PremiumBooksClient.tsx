@@ -35,6 +35,13 @@ interface Props {
   books: PremiumBook[];
 }
 
+const heroImageUrl =
+  "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=" +
+  encodeURIComponent(
+    "premium books collection hero background, elegant leather bound books on a table, dark modern library atmosphere, warm amber spotlight with subtle emerald accents, cinematic realistic photography, high detail, no text, no watermark"
+  ) +
+  "&image_size=landscape_16_9";
+
 function PremiumBadge({ className }: { className?: string }) {
   return (
     <span
@@ -159,7 +166,7 @@ function PreviewModal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+        className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm"
         onClick={onClose}
       >
         <motion.div
@@ -171,7 +178,7 @@ function PreviewModal({
           onClick={(e) => e.stopPropagation()}
         >
           {/* Modal header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E5E7EB] flex-shrink-0">
+          <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-[#E5E7EB] flex-shrink-0">
             <div>
               <div className="flex items-center gap-2 mb-0.5">
                 <PremiumBadge />
@@ -199,7 +206,7 @@ function PreviewModal({
           <div className="relative flex-shrink-0">
             <div className="h-24 bg-gradient-to-t from-white via-white/90 to-transparent -mt-16 relative z-10 pointer-events-none" />
             <div className="bg-white px-6 pb-6 pt-2 border-t border-[#E5E7EB]">
-              <div className="flex items-center gap-3 rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] p-4">
+              <div className="flex flex-wrap items-center gap-3 rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] p-4">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-yellow-400 flex-shrink-0">
                   <Lock className="h-5 w-5 text-white" />
                 </div>
@@ -227,9 +234,12 @@ export function PremiumBooksClient({ books }: Props) {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#0B1220] via-[#111827] to-[#0B1220] px-4 py-20 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(ellipse_at_top_right,_#10B981,_transparent_60%)]" />
-        <div className="absolute inset-0 opacity-5 bg-[radial-gradient(ellipse_at_bottom_left,_#F59E0B,_transparent_60%)]" />
+      <section className="bg-[#0B1220] px-4 py-16 sm:py-20 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImageUrl})` }}
+        />
+        <div className="absolute inset-0 bg-[#0B1220]/80" />
         <div className="mx-auto max-w-7xl relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -274,7 +284,7 @@ export function PremiumBooksClient({ books }: Props) {
       {/* Premium perks bar */}
       <div className="border-b border-[#E5E7EB] bg-[#F8FAFC]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-[#64748B]">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-[#64748B]">
             {[
               "Unlimited premium reads",
               "Preview before purchase",

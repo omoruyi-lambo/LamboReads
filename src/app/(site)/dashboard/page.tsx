@@ -264,7 +264,7 @@ export default function DashboardPage() {
       variants={{ hidden: { opacity: 0 }, show: { opacity: 1, transition: { staggerChildren: 0.08 } } }}
       className="p-4 sm:p-6 lg:p-8 space-y-8 max-w-7xl mx-auto"
     >
-      <motion.section variants={fadeInUp} className="grid gap-6 xl:grid-cols-[2fr_1fr]">
+      <motion.section variants={fadeInUp} className="grid gap-4 sm:gap-6 xl:grid-cols-[2fr_1fr]">
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="space-y-3">
@@ -280,7 +280,7 @@ export default function DashboardPage() {
             </div>
           </div>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-4">
             <StatCard icon={Flame} label="Reading Streak" value={`${streak} days`} color="bg-orange-500" />
             <StatCard icon={BookMarked} label="Books Completed" value={completedCount} color="bg-[#10B981]" />
             <StatCard icon={Heart} label="Books Saved" value={savedCount} color="bg-rose-500" />
@@ -328,7 +328,7 @@ export default function DashboardPage() {
                 <h2 className="text-xl font-semibold text-[#111827]">Jump ahead</h2>
               </div>
             </div>
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {quickActions.map((action) => (
                 <Link key={action.title} href={action.href} className="group overflow-hidden rounded-xl border border-[#E5E7EB] bg-white p-4 transition hover:border-[#10B981] hover:bg-[#F8FAFC]">
                   <div className={cn(
@@ -377,7 +377,7 @@ export default function DashboardPage() {
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
             <SectionHeader title="Recently Viewed" href="/dashboard/history" />
             {recentlyViewed.length > 0 ? (
-              <div className="flex gap-4 overflow-x-auto pb-2">
+              <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-none">
                 {recentlyViewed.slice(0, 6).map((item) => (
                   <Link key={item.bookId} href={`/read/${item.bookId}`} className="min-w-[210px] shrink-0 rounded-xl border border-[#E5E7EB] bg-white p-4 transition hover:border-[#10B981] hover:bg-[#F8FAFC]">
                     <p className="text-sm font-semibold text-[#111827] line-clamp-2">{item.book?.title}</p>
@@ -396,7 +396,7 @@ export default function DashboardPage() {
           <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
             <SectionHeader title="Trending Books" href="/categories" />
             {trending.length > 0 ? (
-              <div className="flex gap-4 overflow-x-auto pb-2">
+              <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-none">
                 {trending.slice(0, 6).map((book) => (
                   <Link key={book.id} href={`/book/${book.id}`} className="min-w-[180px] shrink-0 rounded-xl border border-[#E5E7EB] bg-white p-4 transition hover:border-[#10B981] hover:bg-[#F8FAFC]">
                     <p className="text-sm font-semibold text-[#111827] line-clamp-2">{book.title}</p>
@@ -413,7 +413,7 @@ export default function DashboardPage() {
         <div className="rounded-2xl border border-[#E5E7EB] bg-white p-6 shadow-sm">
           <SectionHeader title="New Releases" href="/library" />
           {newReleases.length > 0 ? (
-            <div className="flex gap-4 overflow-x-auto pb-2">
+            <div className="flex gap-3 sm:gap-4 overflow-x-auto pb-2 scrollbar-none">
               {newReleases.slice(0, 6).map((book) => (
                 <Link key={book.id} href={`/book/${book.id}`} className="min-w-[180px] shrink-0 rounded-xl border border-[#E5E7EB] bg-white p-4 transition hover:border-[#10B981] hover:bg-[#F8FAFC]">
                   <p className="text-sm font-semibold text-[#111827] line-clamp-2">{book.title}</p>

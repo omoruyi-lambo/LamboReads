@@ -204,7 +204,7 @@ export function AuthorDashboardClient({ stats, recentBooks }: Props) {
 
       <div className="flex-1 lg:ml-60">
         {/* Top bar */}
-        <header className="sticky top-0 z-20 bg-white border-b border-[#E5E7EB] px-5 py-3.5 flex items-center gap-4">
+        <header className="sticky top-0 z-20 bg-white border-b border-[#E5E7EB] px-4 sm:px-5 py-3.5 flex items-center gap-3 sm:gap-4">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -230,7 +230,7 @@ export function AuthorDashboardClient({ stats, recentBooks }: Props) {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl bg-gradient-to-br from-[#0B1220] to-[#1E2D40] p-6 sm:p-8 text-white"
           >
-            <div className="flex items-start justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
               <div>
                 <h2 className="text-xl font-bold mb-1">Welcome to your Author Studio</h2>
                 <p className="text-[#94A3B8] text-sm max-w-sm">
@@ -245,7 +245,7 @@ export function AuthorDashboardClient({ stats, recentBooks }: Props) {
           </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {statCards.map((s, i) => (
               <motion.div
                 key={s.label}

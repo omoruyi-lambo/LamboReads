@@ -109,7 +109,7 @@ export default function SettingsPage() {
           <h2 className="text-lg font-semibold text-[#111827]">Profile</h2>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start gap-6">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
           <div className="h-20 w-20 rounded-full overflow-hidden border-2 border-[#10B981]/20 bg-[#F8FAFC] shrink-0">
             {avatarUrl ? (
               <img src={avatarUrl} alt="" className="h-full w-full object-cover" />
@@ -144,7 +144,7 @@ export default function SettingsPage() {
           <h2 className="text-lg font-semibold text-[#111827]">Reading Interests</h2>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {READING_INTERESTS.map((i) => (
             <button
               key={i}

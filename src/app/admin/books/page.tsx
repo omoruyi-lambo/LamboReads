@@ -81,7 +81,7 @@ export default async function AdminBooksPage({
       </div>
 
       {/* Filters */}
-      <form method="GET" className="flex flex-wrap items-center gap-3">
+      <form method="GET" className="flex flex-wrap items-center gap-2 sm:gap-3">
         {/* Search */}
         <div className="relative">
           <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#94A3B8]" />
@@ -89,12 +89,12 @@ export default async function AdminBooksPage({
             name="q"
             defaultValue={q}
             placeholder="Search title or author…"
-            className="h-9 w-64 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
+            className="h-9 w-full sm:w-56 lg:w-64 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
           />
         </div>
 
         {/* Status tabs */}
-        <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1">
+        <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1 overflow-x-auto scrollbar-none max-w-full">
           {STATUSES.map((s) => (
             <a
               key={s}

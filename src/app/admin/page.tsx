@@ -162,7 +162,7 @@ export default async function AdminDashboard() {
 
       {/* Alert banner */}
       {stats.pendingAuthors > 0 && (
-        <div className="flex items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 sm:px-5 py-3 sm:py-4">
           <div className="flex items-center gap-3">
             <AlertCircle className="h-5 w-5 shrink-0 text-amber-500" />
             <p className="text-sm font-medium text-amber-800">
@@ -179,7 +179,7 @@ export default async function AdminDashboard() {
       )}
 
       {/* Stat cards — 2 cols mobile, 4 desktop */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <StatCard label="Total Books"         value={stats.books}             icon={Crown}      iconBg="bg-[#ECFDF5]"  iconColor="text-[#10B981]" href="/admin/books"         />
         <StatCard label="Registered Users"    value={stats.users}             icon={Users}      iconBg="bg-[#EFF6FF]"  iconColor="text-[#3B82F6]" href="/admin/users"         />
         <StatCard label="Total Downloads"     value={stats.downloads}         icon={Download}   iconBg="bg-[#FEF3C7]"  iconColor="text-[#F59E0B]"                             />
@@ -268,7 +268,7 @@ export default async function AdminDashboard() {
       {/* Quick actions */}
       <div>
         <h2 className="mb-3 text-sm font-semibold text-[#111827]">Quick Actions</h2>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
           <QuickAction title="Author Applications" description="Review pending applications"  icon={PenTool}    href="/admin/authors"        badge={stats.pendingAuthors > 0 ? String(stats.pendingAuthors) : undefined} />
           <QuickAction title="Premium Waitlist"    description={`${stats.premiumWaitlist} signups`}   icon={Crown}      href="/admin/waitlists"      />
           <QuickAction title="Audiobook Waitlist"  description={`${stats.audiobookWaitlist} signups`} icon={Headphones} href="/admin/waitlists"      />

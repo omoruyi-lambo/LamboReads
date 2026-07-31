@@ -90,7 +90,7 @@ export function Header() {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1220] text-white shadow-sm overflow-hidden">
             <img src="/images/logo.png" alt="LamboReads" className="h-6 w-6 object-contain" />
           </div>
-          <span className="font-display text-xl font-semibold tracking-tight text-[#0B1220]">
+          <span className="hidden sm:block font-display text-xl font-semibold tracking-tight text-[#0B1220]">
             LamboReads
           </span>
         </Link>
@@ -125,9 +125,9 @@ export function Header() {
         </nav>
 
         {/* Search & User Profile Actions */}
-        <div className="flex items-center gap-3 flex-1 justify-end max-w-md">
+        <div className="flex items-center gap-2 sm:gap-3 justify-end shrink-0 min-w-0">
           {/* Quick Search */}
-          <form action="/library" className="hidden sm:flex relative w-full max-w-xs">
+          <form action="/library" className="hidden sm:flex relative w-44 md:w-64 lg:w-72">
             <Search className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#94A3B8]" />
             <Input
               name="search"
@@ -200,7 +200,7 @@ export function Header() {
               )}
             </div>
           ) : (
-            <div className="flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2">
               <Link href="/login">
                 <Button variant="ghost" size="sm" className="text-sm font-semibold">
                   Sign In

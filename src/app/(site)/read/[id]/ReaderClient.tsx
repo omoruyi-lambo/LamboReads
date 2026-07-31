@@ -266,7 +266,7 @@ export function ReaderClient({ book, routeId }: { book: ReaderBook; routeId: str
               </div>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1 sm:gap-2 overflow-x-auto scrollbar-none">
               <button
                 onClick={() => setTocOpen(!tocOpen)}
                 className="p-2 rounded-lg hover:bg-black/5 transition-colors"
@@ -357,7 +357,7 @@ export function ReaderClient({ book, routeId }: { book: ReaderBook; routeId: str
 
         {/* Settings Panel */}
         {settingsOpen && (
-          <aside className={cn("fixed right-0 top-14 h-full w-80 border-l p-6 overflow-y-auto transition-transform duration-200 z-50", currentTheme.bg, currentTheme.border)}>
+          <aside className={cn("fixed right-0 top-14 h-full w-full sm:w-80 border-l p-4 sm:p-6 overflow-y-auto transition-transform duration-200 z-50", currentTheme.bg, currentTheme.border)}>
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-semibold">Reading Settings</h3>
               <button onClick={() => setSettingsOpen(false)} className="p-1 rounded hover:bg-black/5">
@@ -514,7 +514,7 @@ export function ReaderClient({ book, routeId }: { book: ReaderBook; routeId: str
 
         {/* Bookmarks Panel */}
         {bookmarksOpen && (
-          <aside className={cn("fixed right-0 top-14 h-full w-80 border-l p-6 overflow-y-auto transition-transform duration-200 z-50", currentTheme.bg, currentTheme.border)}>
+          <aside className={cn("fixed right-0 top-14 h-full w-full sm:w-80 border-l p-4 sm:p-6 overflow-y-auto transition-transform duration-200 z-50", currentTheme.bg, currentTheme.border)}>
             <div className="flex items-center justify-between mb-6">
               <h3 className="font-semibold">Bookmarks</h3>
               <button onClick={() => setBookmarksOpen(false)} className="p-1 rounded hover:bg-black/5">
@@ -544,7 +544,7 @@ export function ReaderClient({ book, routeId }: { book: ReaderBook; routeId: str
         )}
 
         {highlightsOpen && (
-          <aside className={cn("fixed right-0 top-14 h-full w-80 border-l p-6 overflow-y-auto z-50", currentTheme.bg, currentTheme.border)}>
+          <aside className={cn("fixed right-0 top-14 h-full w-full sm:w-80 border-l p-4 sm:p-6 overflow-y-auto z-50", currentTheme.bg, currentTheme.border)}>
             <div className="flex items-center justify-between mb-6"><h3 className="font-semibold">Highlights & notes</h3><button onClick={() => setHighlightsOpen(false)} aria-label="Close highlights"><X className="h-5 w-5" /></button></div>
             <div className="space-y-3">
               {reader.highlights.map((highlight) => <div key={highlight.id} className="rounded-lg border border-black/10 p-3"><p className="text-sm italic">“{highlight.text}”</p><div className="mt-2 flex justify-between text-xs opacity-60"><span>{highlight.position}%</span><button onClick={() => reader.deleteHighlight(highlight.id)} className="text-red-500">Delete</button></div></div>)}

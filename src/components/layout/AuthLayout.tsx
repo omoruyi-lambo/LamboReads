@@ -28,11 +28,11 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
               LamboReads
             </span>
           </Link>
-          <p className="text-2xl font-semibold leading-snug max-w-md">"A reader lives a thousand lives before he dies . . . The man who never reads lives only one."</p>
+          <p className="text-2xl font-semibold leading-snug max-w-md">&ldquo;A reader lives a thousand lives before he dies . . . The man who never reads lives only one.&rdquo;</p>
           <p className="mt-2 text-sm text-white/60">- George R.R. Martin</p>
         </div>
       </div>
-      <main className="flex flex-col items-center justify-center bg-[#F8FAFC] p-6 sm:p-10">
+      <main className="flex flex-col items-center justify-center bg-[#F8FAFC] p-4 sm:p-6 md:p-10 min-h-screen lg:min-h-0">
         {children}
       </main>
     </div>

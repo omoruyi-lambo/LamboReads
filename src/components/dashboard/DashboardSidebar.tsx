@@ -115,7 +115,7 @@ export function DashboardSidebar() {
       <button
         type="button"
         onClick={() => setMobileOpen(true)}
-        className="fixed top-4 left-4 z-50 lg:hidden flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 text-white shadow-md cursor-pointer"
+        className="fixed top-4 left-4 z-[60] lg:hidden flex h-10 w-10 items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 text-white shadow-md cursor-pointer"
         aria-label="Open sidebar menu"
       >
         <Menu className="h-5 w-5" />
@@ -123,7 +123,7 @@ export function DashboardSidebar() {
 
       <AnimatePresence>
         {mobileOpen && (
-          <div className="fixed inset-0 z-50 lg:hidden">
+          <div className="fixed inset-0 z-[70] lg:hidden">
             <div
               className="absolute inset-0 bg-black/40 backdrop-blur-sm"
               onClick={() => setMobileOpen(false)}

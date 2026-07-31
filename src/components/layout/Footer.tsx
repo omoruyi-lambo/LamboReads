@@ -36,9 +36,9 @@ export async function Footer() {
   return (
     <footer className="border-t border-[#E5E7EB] bg-white">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-5">
+        <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-5">
           {/* Brand Column */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="sm:col-span-2 lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-2.5 group">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#0B1220] text-white shadow-sm overflow-hidden">
                 <img src="/images/logo.png" alt="LamboReads" className="h-5 w-5 object-contain" />
@@ -123,7 +123,7 @@ export async function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 pt-6 border-t border-[#F1F5F9] flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-[#F1F5F9] flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
           <p className="text-sm text-[#94A3B8]">
             © {new Date().getFullYear()} LamboReads. All public domain content rights reserved.
           </p>

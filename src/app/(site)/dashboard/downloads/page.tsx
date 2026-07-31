@@ -72,7 +72,7 @@ export default function DownloadsPage() {
           <Card className="py-12 text-center text-[#64748B]">No downloads yet.</Card>
         ) : (
           downloads.map((d) => (
-            <Card key={d.id} className="flex justify-between p-4">
+            <Card key={d.id} className="flex flex-col xs:flex-row items-start xs:justify-between gap-2 p-4">
               <div>
                 <p className="font-medium text-[#0B1220]">{d.title}</p>
                 <p className="text-sm text-[#64748B] uppercase">{d.format}</p>

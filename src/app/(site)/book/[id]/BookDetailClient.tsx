@@ -111,7 +111,7 @@ export function BookDetailClient({ book, related }: { book: GutenbergBook; relat
             <p className="text-sm font-medium text-[#10B981]">{category}</p>
             <h1 className="mt-2 font-display text-4xl font-bold tracking-tight text-[#111827] sm:text-5xl">{book.title}</h1>
             <p className="mt-3 text-lg text-[#6B7280]">by {author}</p>
-            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#6B7280]">
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs sm:text-sm text-[#6B7280]">
               <span className="flex items-center gap-1.5">
                 <Globe className="h-4 w-4" />
                 {book.languages.join(", ").toUpperCase()}
@@ -149,7 +149,7 @@ export function BookDetailClient({ book, related }: { book: GutenbergBook; relat
         <div id="download" className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold tracking-tight text-[#111827] font-display">Download Formats</h2>
           <p className="mt-2 text-sm text-[#6B7280]">Download directly to your device — no external redirects required.</p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {formats.map((f) => {
               const url = getFormatUrl(book, f.key);
               return (

@@ -156,7 +156,7 @@ export default function PremiumMembershipPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {benefits.map((benefit, i) => {
               const Icon = benefit.icon;
               return (
@@ -187,7 +187,7 @@ export default function PremiumMembershipPage() {
               <Crown className="h-6 w-6 text-amber-500" />
               <h2 className="text-xl font-bold text-[#111827]">Premium includes</h2>
             </div>
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
               {[
                 "All premium & exclusive books",
                 "Full audiobook library",
@@ -215,7 +215,7 @@ export default function PremiumMembershipPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="rounded-2xl border border-[#E5E7EB] bg-white shadow-sm p-8"
+            className="rounded-2xl border border-[#E5E7EB] bg-white shadow-sm p-5 sm:p-8"
           >
             <div className="text-center mb-8">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500/10 to-yellow-400/10 mb-4">

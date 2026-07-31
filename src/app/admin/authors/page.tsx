@@ -72,7 +72,7 @@ export default async function AdminAuthorsPage({
       </div>
 
       {/* Summary cards */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         {[
           { label: "Pending",  value: pendingCount,  icon: Clock,        bg: "bg-amber-50",  text: "text-amber-600"  },
           { label: "Approved", value: approvedCount, icon: CheckCircle,  bg: "bg-[#ECFDF5]", text: "text-[#059669]"  },
@@ -89,9 +89,9 @@ export default async function AdminAuthorsPage({
       </div>
 
       {/* Filter bar */}
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between flex-wrap">
         {/* Tabs */}
-        <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1 w-fit">
+        <div className="flex items-center gap-1 rounded-lg border border-[#E5E7EB] bg-white p-1 w-full sm:w-fit overflow-x-auto scrollbar-none">
           {filterTabs.map((tab) => (
             <a
               key={tab.value}
@@ -123,7 +123,7 @@ export default async function AdminAuthorsPage({
               name="q"
               defaultValue={q}
               placeholder="Search name or email…"
-              className="h-9 w-56 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
+              className="h-9 w-full sm:w-56 rounded-lg border border-[#E5E7EB] bg-white pl-8 pr-3 text-sm placeholder:text-[#94A3B8] focus:border-[#10B981] focus:outline-none focus:ring-1 focus:ring-[#10B981]/30 transition-all"
             />
           </div>
           <button

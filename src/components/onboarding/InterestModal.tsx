@@ -456,7 +456,7 @@ export function InterestModal({
             <div
               ref={scrollRef}
               className="min-h-0 flex-1 overflow-y-auto overscroll-contain scroll-smooth px-6 py-5 sm:px-8"
-              style={{ scrollbarWidth: "none" }} /* hide thin scrollbar in Firefox */
+              style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" }} /* hide thin scrollbar in Firefox */
             >
               {/* Hide Webkit scrollbar */}
               <style>{`

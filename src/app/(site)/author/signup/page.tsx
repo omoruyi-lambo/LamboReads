@@ -174,7 +174,7 @@ export default function AuthorSignupPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <div className="mx-auto max-w-3xl px-4 py-8 sm:py-12 sm:px-6">
         {/* Page title */}
         <div className="text-center mb-8">
           <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#0B1220] mb-4">
@@ -187,7 +187,7 @@ export default function AuthorSignupPage() {
         </div>
 
         {/* Progress steps */}
-        <div className="flex items-center gap-2 mb-8 justify-center">
+        <div className="flex items-center gap-1 sm:gap-2 mb-6 sm:mb-8 justify-center overflow-x-auto scrollbar-none px-2">
           {["Account", "Profile", "Social & Bio"].map((label, i) => (
             <div key={label} className="flex items-center gap-2">
               <div
@@ -208,13 +208,13 @@ export default function AuthorSignupPage() {
               >
                 {label}
               </span>
-              {i < 2 && <div className="h-px w-8 sm:w-12 bg-[#E5E7EB] mx-1" />}
+              {i < 2 && <div className="h-px w-4 sm:w-8 md:w-12 bg-[#E5E7EB] mx-0.5 sm:mx-1 flex-shrink-0" />}
             </div>
           ))}
         </div>
 
         <form onSubmit={handleSubmit}>
-          <div className="rounded-2xl border border-[#E5E7EB] bg-white shadow-sm p-6 sm:p-8">
+          <div className="rounded-2xl border border-[#E5E7EB] bg-white shadow-sm p-4 sm:p-6 md:p-8">
             <AnimatePresence mode="wait">
               {/* Step 1: Account */}
               {step === 1 && (
@@ -466,7 +466,7 @@ export default function AuthorSignupPage() {
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                     <div>
                       <label className="block text-sm font-medium text-[#111827] mb-1.5">Twitter / X</label>
                       <div className="relative">

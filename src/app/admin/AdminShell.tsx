@@ -57,7 +57,7 @@ export default function AdminShell({ displayName, email, children }: Props) {
           <MobileMenuButton onClick={() => setMobileOpen(true)} />
 
           {/* Global search */}
-          <div className="flex flex-1 items-center max-w-sm">
+          <div className="flex flex-1 items-center max-w-[180px] sm:max-w-sm">
             <div className="relative w-full">
               <Search className="absolute left-3 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-[#94A3B8]" />
               <input

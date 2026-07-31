@@ -79,7 +79,7 @@ export function ComingSoonPremium() {
           </ul>
 
           {submitted ? (
-            <p className="mt-8 text-sm text-emerald-200">We'll notify you when Premium launches!</p>
+            <p className="mt-8 text-sm text-emerald-200">We&apos;ll notify you when Premium launches!</p>
           ) : (
             <div className="mt-8 flex gap-2">
               <input

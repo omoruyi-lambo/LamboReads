@@ -239,7 +239,7 @@ export function AuthorUploadForm({ authorName }: Props) {
     <form onSubmit={handleSubmit} className="space-y-5">
 
       {/* ── Row: cover + core metadata ─────────────────────────────────── */}
-      <div className="grid gap-5 lg:grid-cols-[180px_1fr]">
+      <div className="grid gap-4 sm:gap-5 lg:grid-cols-[180px_1fr]">
 
         {/* Cover */}
         <div className="space-y-1.5">
@@ -441,18 +441,18 @@ export function AuthorUploadForm({ authorName }: Props) {
       </div>
 
       {/* ── Actions ─────────────────────────────────────────────────────── */}
-      <div className="flex items-center gap-3 justify-end pb-4">
+      <div className="flex flex-col-reverse sm:flex-row sm:items-center sm:gap-3 sm:justify-end gap-2 pb-4">
         <button
           type="button"
           onClick={() => router.push("/author/dashboard")}
-          className="inline-flex items-center gap-2 rounded-lg border border-[#E5E7EB] bg-white px-4 py-2 text-sm font-medium text-[#475569] hover:bg-[#F8FAFC] transition-colors"
+          className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#E5E7EB] bg-white px-4 py-2 text-sm font-medium text-[#475569] hover:bg-[#F8FAFC] transition-colors w-full sm:w-auto"
         >
           <X className="h-4 w-4" /> Cancel
         </button>
         <button
           type="submit"
           disabled={isPending}
-          className="inline-flex items-center gap-2 rounded-lg bg-[#10B981] px-5 py-2 text-sm font-semibold text-white hover:bg-[#059669] disabled:opacity-60 transition-colors"
+          className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#10B981] px-5 py-2 text-sm font-semibold text-white hover:bg-[#059669] disabled:opacity-60 transition-colors w-full sm:w-auto"
         >
           {isPending
             ? <><Loader2 className="h-4 w-4 animate-spin" /> Submitting…</>

@@ -113,7 +113,7 @@ export default async function AdminAnalyticsPage() {
       </div>
 
       {/* Summary row */}
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {summaryStats.map(({ label, value, icon: Icon, color, bg }) => (
           <div key={label} className="rounded-xl border border-[#E5E7EB] bg-white p-5 shadow-sm">
             <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${bg} mb-3`}>
@@ -128,7 +128,7 @@ export default async function AdminAnalyticsPage() {
       </div>
 
       {/* Charts — 2 col grid */}
-      <div className="grid gap-5 lg:grid-cols-2">
+      <div className="grid gap-4 sm:gap-5 lg:grid-cols-2">
         <UserGrowthChart    data={userGrowthData} />
         <DownloadsChart     data={downloadData}   />
         <WaitlistChart      data={waitlistData}   />
