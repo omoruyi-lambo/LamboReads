@@ -13,6 +13,7 @@ export default async function MediaPage() {
 
       <div className="flex flex-col items-center justify-center rounded-xl border border-[#E5E7EB] bg-white py-20 text-center shadow-sm">
         <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#F8FAFC] mb-4">
+          {/* eslint-disable-next-line jsx-a11y/alt-text */}
           <Image className="h-6 w-6 text-[#94A3B8]" aria-hidden="true" />
         </div>
         <p className="text-sm font-medium text-[#111827]">Media library coming soon</p>
