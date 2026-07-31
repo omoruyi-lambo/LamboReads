@@ -36,11 +36,7 @@ interface Props {
 }
 
 const heroImageUrl =
-  "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=" +
-  encodeURIComponent(
-    "premium books collection hero background, elegant leather bound books on a table, dark modern library atmosphere, warm amber spotlight with subtle emerald accents, cinematic realistic photography, high detail, no text, no watermark"
-  ) +
-  "&image_size=landscape_16_9";
+  "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1920&q=80";
 
 function PremiumBadge({ className }: { className?: string }) {
   return (
