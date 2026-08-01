@@ -104,9 +104,9 @@ export function Header() {
           <Image
             src="/images/logo.png"
             alt="LamboReads"
-            width={32}
-            height={32}
-            className="h-8 w-8 object-contain transition-transform duration-200 group-hover:scale-105"
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105"
             priority
           />
           <span className="hidden sm:block text-[15px] font-bold tracking-tight text-[#0B1220] select-none">

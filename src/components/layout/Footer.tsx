@@ -45,7 +45,7 @@ export async function Footer() {
               <img
                 src="/images/logo.png"
                 alt="LamboReads"
-                className="h-9 w-9 object-contain brightness-0 invert"
+                className="h-12 w-12 object-contain opacity-90"
               />
               <span className="text-lg font-bold tracking-tight text-white">
                 LamboReads
