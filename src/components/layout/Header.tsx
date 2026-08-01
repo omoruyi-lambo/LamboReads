@@ -187,12 +187,12 @@ export function Header() {
       <header className={cn("sticky top-0 z-50 w-full transition-all duration-300",
         scrolled ? "bg-white/92 backdrop-blur-xl shadow-[0_1px_0_0_rgba(0,0,0,0.06)]"
                  : "bg-white/80 backdrop-blur-md border-b border-[#F1F5F9]")}>
-        <div className="mx-auto flex h-16 max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center gap-3 px-4 sm:px-6 lg:px-8">
 
           {/* Logo */}
           <Link href="/" aria-label="LamboReads" className="flex items-center gap-2.5 shrink-0 group">
-            <Image src="/images/logo.png" alt="LamboReads" width={40} height={40} priority
-              className="h-10 w-10 object-contain transition-transform duration-200 group-hover:scale-105" />
+            <Image src="/images/logo.png" alt="LamboReads" width={56} height={56} priority
+              className="h-14 w-14 object-contain transition-transform duration-200 group-hover:scale-105" />
             <span className="hidden sm:block text-[15px] font-bold tracking-tight text-[#0B1220] select-none">LamboReads</span>
           </Link>
 
