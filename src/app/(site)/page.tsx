@@ -19,6 +19,7 @@ import {
 
 import { supabase } from "@/lib/supabase/server";
 import HomeFreeBooks from "@/components/home/HomeFreeBooks";
+import { HeroBookViewer } from "@/components/home/HeroBookViewer";
 
 function FreeBooksSkeleton() {
   return (
@@ -63,70 +64,33 @@ export default async function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-16 pb-16 sm:pt-24 sm:pb-24 bg-[#F8FAFC] relative overflow-hidden">
-        <div className="mx-auto max-w-7xl relative z-10">
-          <div className="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-16">
+      {/* Hero Section — 3D animated book as full-bleed background */}
+      <section className="relative overflow-hidden bg-[#0B1220]" style={{ minHeight: "min(100vw, 600px)" }}>
+        {/* 3D book viewer — client component so it never SSR-fetches */}
+        <HeroBookViewer />
 
-            {/* 3D animated book */}
-            <div className="w-full lg:w-1/2 flex-shrink-0">
-              <div className="relative w-full" style={{ paddingBottom: "75%" }}>
-                <iframe
-                  title="Animated Book"
-                  src="https://sketchfab.com/models/097f8683aa5d4c9da1530d6119c20ac3/embed?autostart=1&ui_hint=0&ui_controls=0&ui_infos=0&ui_inspector=0&ui_stop=0&ui_watermark=0&ui_watermark_link=0&ui_ar=0&ui_help=0&ui_settings=0&ui_vr=0&ui_fullscreen=0&ui_annotations=0&dnt=1"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; xr-spatial-tracking"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full rounded-2xl shadow-xl"
-                  loading="lazy"
-                />
-              </div>
-              {/* Attribution — required by Sketchfab embed terms */}
-              <p className="mt-2 text-center text-[11px] text-[#94A3B8]">
-                <a
-                  href="https://sketchfab.com/3d-models/book-animated-book-historical-book-097f8683aa5d4c9da1530d6119c20ac3"
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  className="hover:text-[#10B981] transition-colors"
-                >
-                  Animated Book
-                </a>{" "}
-                by{" "}
-                <a
-                  href="https://sketchfab.com/khalidrahmanhanify"
-                  target="_blank"
-                  rel="nofollow noreferrer"
-                  className="hover:text-[#10B981] transition-colors"
-                >
-                  Khalid Rahman Hanify
-                </a>{" "}
-                on Sketchfab
-              </p>
+        {/* Text content sits on top of the overlay */}
+        <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 sm:py-32" style={{ minHeight: "inherit" }}>
+          <div className="text-center max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6 drop-shadow-lg">
+              Your Premium Reading Experience
+            </h1>
+            <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+              Discover thousands of public-domain literary classics. Read online, save your progress, and enjoy a beautifully crafted reading experience.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/library">
+                <Button size="lg" className="w-full sm:w-auto">
+                  Start Reading
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link href="/signup">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto bg-white/10 border-white/30 text-white hover:bg-white/20">
+                  Create Free Account
+                </Button>
+              </Link>
             </div>
-
-            {/* Text + CTA */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#111827] mb-6">
-                Your Premium Reading Experience
-              </h1>
-              <p className="text-lg sm:text-xl text-[#64748B] mb-10 max-w-2xl mx-auto lg:mx-0">
-                Discover thousands of public-domain literary classics. Read online, save your progress, and enjoy a beautifully crafted reading experience.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/library">
-                  <Button size="lg" className="w-full sm:w-auto">
-                    Start Reading
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-                <Link href="/signup">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                    Create Free Account
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
