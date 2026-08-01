@@ -144,9 +144,7 @@ export function AdminSidebarDesktop({
         )}
       >
         <Link href="/admin" className="flex items-center gap-2.5 min-w-0">
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#0B1220]">
-            <BookMarked className="h-4 w-4 text-[#10B981]" />
-          </div>
+          <img src="/images/logo.png" alt="LamboReads" className="h-8 w-8 object-contain shrink-0" />
           {!collapsed && (
             <span className="font-bold text-[#111827] truncate text-sm">
               LamboReads
@@ -271,9 +269,7 @@ export function AdminSidebarMobile({
           >
             <div className="flex h-14 items-center justify-between border-b border-[#E5E7EB] px-4 shrink-0">
               <Link href="/admin" onClick={onClose} className="flex items-center gap-2.5">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0B1220]">
-                  <BookMarked className="h-4 w-4 text-[#10B981]" />
-                </div>
+                <img src="/images/logo.png" alt="LamboReads" className="h-8 w-8 object-contain" />
                 <span className="font-bold text-[#111827] text-sm">LamboReads</span>
               </Link>
               <button

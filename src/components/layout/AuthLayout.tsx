@@ -20,11 +20,9 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220]/80 via-[#0B1220]/50 to-transparent" />
         <div className="relative flex flex-col justify-end h-full p-12 text-white">
-          <Link href="/" className="flex items-center gap-3 mb-4">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white text-[#0B1220] shadow-sm overflow-hidden">
-              <img src="/images/logo.png" alt="LamboReads" className="h-5 w-5 object-contain" />
-            </div>
-            <span className="font-display text-xl font-bold tracking-tight text-white">
+          <Link href="/" className="flex items-center gap-2.5 mb-4">
+            <img src="/images/logo.png" alt="LamboReads" className="h-9 w-9 object-contain" />
+            <span className="text-xl font-bold tracking-tight text-white">
               LamboReads
             </span>
           </Link>

@@ -50,9 +50,7 @@ export function DashboardSidebar() {
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-[#E5E7EB]">
         <Link href="/dashboard" className="flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#0B1220] text-white shadow-sm overflow-hidden">
-            <img src="/images/logo.png" alt="LamboReads" className="h-4 w-4 object-contain" />
-          </div>
+          <img src="/images/logo.png" alt="LamboReads" className="h-7 w-7 object-contain" />
           {!collapsed && (
             <span className="font-display text-sm font-semibold tracking-tight text-[#0B1220]">
               LamboReads

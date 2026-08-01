@@ -61,9 +61,7 @@ function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => 
       {/* Logo */}
       <div className="p-5 border-b border-[#E5E7EB]">
         <Link href="/" className="flex items-center gap-2.5" onClick={onClose}>
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#0B1220]">
-            <Image src="/images/logo.png" alt="LamboReads" width={20} height={20} className="object-contain" />
-          </div>
+          <Image src="/images/logo.png" alt="LamboReads" width={36} height={36} className="object-contain" />
           <div>
             <p className="font-display font-bold text-[#111827] text-sm">LamboReads</p>
             <p className="text-[10px] text-[#64748B]">Author Studio</p>
