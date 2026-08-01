@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL ?? "https://lamboreads.com"
   ),
-  title: "LamboReads — Free Public-Domain eBooks",
+  title: "LamboReads",
   description:
-    "Discover, read, and download 75,000+ free public-domain books. Save to your library, bookmark pages, and track your reading — no cart required.",
+    "Read and download free books. Save your progress and build your library.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
@@ -42,18 +42,18 @@ export const metadata: Metadata = {
     shortcut: "/icons/favicon-32x32.png",
   },
   openGraph: {
-    title: "LamboReads — Free Public-Domain eBooks",
+    title: "LamboReads",
     description:
-      "Discover, read, and download 75,000+ free public-domain books. Save to your library, bookmark pages, and track your reading.",
+      "Read and download free books. Save your progress and build your library.",
     type: "website",
     locale: "en_US",
     images: [{ url: "/icons/icon-512x512.png", width: 512, height: 512, alt: "LamboReads" }],
   },
   twitter: {
     card: "summary",
-    title: "LamboReads — Free Public-Domain eBooks",
+    title: "LamboReads",
     description:
-      "75,000+ free public-domain books. Read, save, and track your reading for free.",
+      "Free books. Read, save, and track your progress.",
     images: ["/icons/icon-512x512.png"],
   },
 };

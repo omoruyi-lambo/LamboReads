@@ -32,7 +32,7 @@ const NAV_SECTIONS = [
       { href: "/library",                 icon: faBookOpen,     label: "All Books" },
       { href: "/library?sort=popular",    icon: faFire,         label: "Trending" },
       { href: "/library?sort=ascending",  icon: faWandMagicSparkles, label: "New Releases" },
-      { href: "/recommendations",         icon: faStar,         label: "Editor's Picks" },
+      { href: "/recommendations",         icon: faStar,         label: "Staff Picks" },
       { href: "/categories",              icon: faTags,         label: "Categories" },
     ],
   },

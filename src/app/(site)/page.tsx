@@ -73,10 +73,10 @@ export default async function HomePage() {
         <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-24 sm:py-32" style={{ minHeight: "inherit" }}>
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6 drop-shadow-lg">
-              Your Premium Reading Experience
+              Read More. Pay Nothing.
             </h1>
             <p className="text-lg sm:text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-              Discover thousands of public-domain literary classics. Read online, save your progress, and enjoy a beautifully crafted reading experience.
+              Over 70,000 books. No account required to start reading.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/library">
@@ -103,7 +103,7 @@ export default async function HomePage() {
               Everything You Need
             </h2>
             <p className="text-[#64748B] max-w-2xl mx-auto">
-              A complete reading platform designed for book lovers, with features that enhance your literary journey.
+              Everything you need to read, save, and track your books.
             </p>
           </div>
 
@@ -116,7 +116,7 @@ export default async function HomePage() {
                 Extensive Library
               </h3>
               <p className="text-[#64748B]">
-                Access thousands of public-domain classics from world-renowned authors, completely free.
+                Tens of thousands of books, completely free.
               </p>
             </div>
 
@@ -343,10 +343,10 @@ export default async function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="bg-[#0B1220] rounded-2xl p-8 sm:p-12 lg:p-16 text-center">
             <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-              Start Your Reading Journey Today
+              Start reading today.
             </h2>
             <p className="text-[#94A3B8] mb-8 max-w-2xl mx-auto">
-              Join thousands of readers enjoying premium literary classics. No credit card required.
+              Free, forever. No subscription needed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/signup">

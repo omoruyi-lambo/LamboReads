@@ -271,7 +271,7 @@ export default function DashboardPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-[#10B981]">Dashboard</p>
               <h1 className="text-3xl sm:text-4xl font-semibold text-[#111827]">Welcome back, {displayName}</h1>
               <p className="max-w-2xl text-sm text-[#64748B] sm:text-base">
-                Discover books curated to your taste, continue your streak, and keep your reading flow strong.
+                Pick up where you left off.
               </p>
             </div>
             <div className="rounded-2xl border border-[#10B981]/20 bg-[#ECFDF5] p-4 text-right">
@@ -338,7 +338,7 @@ export default function DashboardPage() {
                     <action.icon className="h-5 w-5 text-white" />
                   </div>
                   <div className="mt-3 text-sm font-semibold text-[#111827]">{action.title}</div>
-                  <p className="mt-1 text-xs text-[#64748B]">Open the next step in your reading flow.</p>
+                  <p className="mt-1 text-xs text-[#64748B]">Go there now.</p>
                 </Link>
               ))}
             </div>
@@ -369,7 +369,7 @@ export default function DashboardPage() {
               ))}
             </div>
           ) : (
-            <EmptyState message="Personalized recommendations will appear here as soon as you engage with the app." />
+            <EmptyState message="Start reading to get recommendations." />
           )}
         </div>
 

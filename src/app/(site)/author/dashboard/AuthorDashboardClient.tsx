@@ -64,7 +64,7 @@ function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => 
           <Image src="/images/logo.png" alt="LamboReads" width={36} height={36} className="object-contain" />
           <div>
             <p className="font-display font-bold text-[#111827] text-sm">LamboReads</p>
-            <p className="text-[10px] text-[#64748B]">Author Studio</p>
+            <p className="text-[10px] text-[#64748B]">Dashboard</p>
           </div>
         </Link>
       </div>
@@ -105,7 +105,7 @@ function Sidebar({ mobileOpen, onClose }: { mobileOpen: boolean; onClose: () => 
       {/* Footer */}
       <div className="p-4 border-t border-[#E5E7EB]">
         <div className="rounded-xl bg-[#F8FAFC] border border-[#E5E7EB] p-3">
-          <p className="text-xs font-semibold text-[#111827] mb-0.5">Application Status</p>
+          <p className="text-xs font-semibold text-[#111827] mb-0.5">Status</p>
           <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 border border-amber-200 px-2 py-0.5 text-[10px] font-bold text-amber-700">
             Pending Approval
           </span>
@@ -230,15 +230,15 @@ export function AuthorDashboardClient({ stats, recentBooks }: Props) {
           >
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
               <div>
-                <h2 className="text-xl font-bold mb-1">Welcome to your Author Studio</h2>
+                <h2 className="text-xl font-bold mb-1">Welcome to your Dashboard</h2>
                 <p className="text-[#94A3B8] text-sm max-w-sm">
-                  Publish books, track your readers, and manage your royalties all in one place.
+                  Manage your books, track readers, and grow your audience.
                 </p>
               </div>
               <PenTool className="h-8 w-8 text-[#10B981] flex-shrink-0 hidden sm:block" />
             </div>
             <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-400">
-              Status: Pending Approval — Our team will review your application shortly.
+              Under review — we'll be in touch shortly.
             </div>
           </motion.div>
 

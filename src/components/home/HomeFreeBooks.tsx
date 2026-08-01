@@ -5,7 +5,7 @@ import { BookCard } from "@/components/books/BookCard";
 import { Button } from "@/components/ui/Button";
 
 /**
- * Server component that renders a "Featured Free Books" section on the homepage.
+ * Server component that renders a "Free Books" section on the homepage.
  *
  * Data strategy (matches the requirements):
  *  1. Calls getBooksFromCatalog() which is Supabase-first: returns uploaded/admin books
@@ -40,10 +40,10 @@ export default async function HomeFreeBooks() {
               <BookOpen className="h-3.5 w-3.5" /> Free Library
             </div>
             <h2 className="text-3xl sm:text-4xl font-semibold text-[#111827]">
-              Featured Free Books
+              Free Books
             </h2>
             <p className="text-[#64748B] mt-2">
-              Thousands of public-domain classics — free to read, save, and download.
+              Read and download for free.
             </p>
           </div>
           <Link href="/library" className="flex-shrink-0">
@@ -64,7 +64,7 @@ export default async function HomeFreeBooks() {
             <div className="mt-10 text-center">
               <Link href="/library">
                 <Button variant="primary" size="lg" className="inline-flex items-center gap-2">
-                  Explore the Full Library
+                  Browse all books
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -81,7 +81,7 @@ export default async function HomeFreeBooks() {
             <p className="text-sm text-[#64748B] mb-5">
               {fetchFailed
                 ? "We couldn\u2019t reach the book provider right now. Please check back shortly."
-                : "Our library is being set up. Check back soon for thousands of free classics."}
+                : "No books yet. Check back soon."}
             </p>
             <Link href="/library">
               <Button variant="outline" size="sm">

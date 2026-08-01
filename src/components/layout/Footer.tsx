@@ -53,8 +53,8 @@ export async function Footer() {
             </Link>
             <p className="text-sm leading-relaxed text-white/60 max-w-xs">
               {totalBooks > 0
-                ? `${totalBooks.toLocaleString()}+ public-domain classics. Free to read, save, and download — forever.`
-                : 'Thousands of public-domain classics. Free to read, save, and download — forever.'}
+                ? `${totalBooks.toLocaleString()}+ free books.`
+                : 'Free books, forever.'}
             </p>
             {/* Trust badges */}
             <div className="mt-6 flex flex-wrap gap-3">
@@ -104,7 +104,7 @@ export async function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} LamboReads. Built for readers everywhere.
+            © {new Date().getFullYear()} LamboReads. © LamboReads.
           </p>
           <a
             href="mailto:lamboreads.support@gmail.com"

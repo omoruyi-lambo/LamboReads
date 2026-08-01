@@ -19,7 +19,7 @@ const BROWSE_ITEMS = [
   { href: "/library",                icon: faBookOpen, label: "All Books",      desc: "Browse the full catalogue" },
   { href: "/library?sort=popular",   icon: faFire,     label: "Trending",       desc: "Most read this week" },
   { href: "/library?sort=ascending", icon: faWandMagicSparkles, label: "New Releases",   desc: "Recently added titles" },
-  { href: "/recommendations",        icon: faStar,     label: "Editor's Picks", desc: "Curated by our team" },
+  { href: "/recommendations",        icon: faStar,     label: "Staff Picks", desc: "Hand-selected titles" },
   { href: "/categories",             icon: faTags,     label: "Categories",     desc: "Browse by genre" },
 ];
 
