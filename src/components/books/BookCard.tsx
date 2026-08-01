@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { BookOpen, Download } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBookOpen, faDownload } from "@fortawesome/free-solid-svg-icons";
 import type { GutenbergBook } from "@/lib/types";
 import { getAuthorName, getCoverUrl, mapSubjectToCategory } from "@/lib/gutendex";
 import { cn } from "@/lib/utils";
@@ -96,7 +97,7 @@ export function BookCard({ book, className, showActions = false }: BookCardProps
               /* Empty state — uses real title, no placeholder text */
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-5 text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/80 shadow-sm">
-                  <BookOpen className="h-6 w-6 text-[#94A3B8]" />
+                  <FontAwesomeIcon icon={faBookOpen} className="h-6 w-6 text-[#94A3B8]" />
                 </div>
                 <span className="text-[11px] font-medium leading-snug text-[#94A3B8] line-clamp-4">
                   {book.title}
@@ -171,7 +172,7 @@ export function BookCard({ book, className, showActions = false }: BookCardProps
         {/* Download count — real field from API */}
         {downloads > 0 && (
           <p className="flex items-center gap-1 text-[10px] text-[#94A3B8] mt-auto pt-1">
-            <Download className="h-2.5 w-2.5 shrink-0" />
+            <FontAwesomeIcon icon={faDownload} className="h-2.5 w-2.5 shrink-0" />
             {downloads.toLocaleString()}
           </p>
         )}
