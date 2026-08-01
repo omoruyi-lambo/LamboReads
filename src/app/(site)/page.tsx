@@ -47,7 +47,7 @@ function FreeBooksSkeleton() {
   );
 }
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 3600;
 
 export default async function HomePage() {
   // Fetch premium books from Supabase (no mock data)
