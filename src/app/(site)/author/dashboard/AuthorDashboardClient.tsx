@@ -238,7 +238,7 @@ export function AuthorDashboardClient({ stats, recentBooks }: Props) {
               <PenTool className="h-8 w-8 text-[#10B981] flex-shrink-0 hidden sm:block" />
             </div>
             <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 px-3 py-1 text-xs font-semibold text-amber-400">
-              Under review — we'll be in touch shortly.
+              Under review — we&apos;ll be in touch shortly.
             </div>
           </motion.div>
 
