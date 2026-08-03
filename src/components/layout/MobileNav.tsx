@@ -89,11 +89,11 @@ export function MobileNav({ open, onClose, user, displayName, avatarUrl, initial
           {/* Panel — slides in from right */}
           <motion.div
             key="panel"
-            initial={{ x: "100%" }}
+            initial={{ x: "-100%" }}
             animate={{ x: 0 }}
-            exit={{ x: "100%" }}
+            exit={{ x: "-100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed right-0 top-0 bottom-0 z-[70] w-full max-w-sm bg-white shadow-2xl flex flex-col overflow-hidden"
+            className="fixed left-0 top-0 bottom-0 z-[70] w-full max-w-sm bg-white shadow-2xl flex flex-col overflow-hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"

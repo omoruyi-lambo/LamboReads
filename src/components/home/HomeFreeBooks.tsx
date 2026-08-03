@@ -36,19 +36,16 @@ export default async function HomeFreeBooks() {
         {/* Section header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-10 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#ECFDF5] border border-[#10B981]/20 px-3 py-1 text-xs font-semibold text-[#10B981] mb-3">
-              <BookOpen className="h-3.5 w-3.5" /> Free Library
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-[#111827]">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111827]">
               Free Books
             </h2>
-            <p className="text-[#64748B] mt-2">
-              Read and download for free.
+            <p className="text-[#64748B] mt-3 text-base leading-relaxed">
+              Browse thousands of public-domain classics. Free to read and download, forever.
             </p>
           </div>
           <Link href="/library" className="flex-shrink-0">
-            <Button variant="outline" className="flex items-center gap-2">
-              Browse All <ArrowRight className="h-4 w-4" />
+            <Button variant="outline" className="flex items-center gap-2 text-sm">
+              Browse library <ArrowRight className="h-3.5 w-3.5" />
             </Button>
           </Link>
         </div>
