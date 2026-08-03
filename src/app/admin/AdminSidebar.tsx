@@ -28,6 +28,8 @@ const NAV = [
     label: "Content",
     items: [
       { href: "/admin/books",        label: "Books",           icon: BookOpen      },
+      { href: "/admin/imports",      label: "Import Books",    icon: BookMarked    },
+      { href: "/admin/import-history", label: "Import History", icon: FileText      },
       { href: "/admin/reviews",      label: "Reviews",         icon: MessageCircle },
       { href: "/admin/comments",     label: "Comments",        icon: MessagesSquare },
       { href: "/admin/categories",   label: "Categories",      icon: Tags          },

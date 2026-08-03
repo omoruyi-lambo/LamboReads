@@ -277,6 +277,8 @@ export default async function AdminDashboard() {
           <QuickAction title="Premium Books"       description="Manage paid catalog"          icon={BookMarked} href="/admin/premium-books"  />
           <QuickAction title="Announcements"       description="Send platform-wide message"   icon={PenTool}    href="/admin/announcements"  />
           <QuickAction title="Analytics"           description="Charts and trends"            icon={TrendingUp} href="/admin/analytics"      />
+          <QuickAction title="Import Books"        description="Import from Project Gutenberg" icon={BookMarked} href="/admin/imports"         />
+          <QuickAction title="Import History"      description="View all import sessions"      icon={ListChecks} href="/admin/import-history"  />
         </div>
       </div>
     </div>
